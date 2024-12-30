@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global BioTech - Multilingual Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+        }
+        nav a {
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            background-color: #4CAF50;
+        }
+        .language-switch {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .language-switch button {
+            margin: 0 5px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .language-switch button:hover {
+            background-color: #45a049;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        const translations = {
+            en: {
+                title: "Global BioTech",
+                hero: "Empower Your Agriculture with Innovation",
+                products: "Our Products",
+                technology: "Our Technology",
+                about: "About Us",
+                contact: "Contact Us",
+                intro: "Innovative solutions for organic waste management and sustainable agriculture."
+            },
+            ko: {
+                title: "글로벌 바이오텍",
+                hero: "혁신으로 농업을 강화하십시오",
+                products: "제품 소개",
+                technology: "우리의 기술",
+                about: "회사 소개",
+                contact: "문의하기",
+                intro: "유기 폐기물 관리 및 지속 가능한 농업을 위한 혁신적인 솔루션."
+            }
+        };
+
+        function switchLanguage(lang) {
+            document.querySelector('title').textContent = translations[lang].title;
+            document.querySelector('.hero h1').textContent = translations[lang].hero;
+            document.querySelector('#products h2').textContent = translations[lang].products;
+            document.querySelector('#technology h2').textContent = translations[lang].technology;
+            document.querySelector('#about h2').textContent = translations[lang].about;
+            document.querySelector('#contact h2').textContent = translations[lang].contact;
+            document.querySelector('#intro').textContent = translations[lang].intro;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 id="intro">Innovative solutions for organic waste management and sustainable agriculture.</h1>
+        <div class="language-switch">
+            <button onclick="switchLanguage('en')">English</button>
+            <button onclick="switchLanguage('ko')">한국어</button>
+        </div>
+    </header>
+    <nav>
+        <a href="#products">Products</a>
+        <a href="#technology">Technology</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section class="hero">
+        <h1>Empower Your Agriculture with Innovation</h1>
+    </section>
+    <section id="products" class="section">
+        <h2>Our Products</h2>
+        <p>Explore our range of eco-friendly fertilizers and soil enhancers.</p>
+    </section>
+    <section id="technology" class="section">
+        <h2>Our Technology</h2>
+        <p>Advanced solutions using nanotechnology and sustainable practices.</p>
+    </section>
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>We are dedicated to innovation in agriculture and environmental protection.</p>
+    </section>
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Email us at <a href="mailto:info@globalbiotech.com">info@globalbiotech.com</a>.</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Global BioTech. All rights reserved.</p>
+    </footer>
+</body>
+</html>
